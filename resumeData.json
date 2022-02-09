@@ -3,7 +3,7 @@
     "name":"Keeton Martin",
     "description":"I am a software engineer and I've put together this page to showcase my work. Welcome to my home base on the internet",
     "image":"profilepic.jpeg",
-    "bio":"I graduate(d) from Haverford College with a B.S. in Computer Science in May 2022. I've accepted a job offer at Salesforce as an engineer, starting in August 2022. I like to build things in Python, Java, Java/Typescript, and in my free time I like to do play and think about basketball, keyboards, and enjoy the great outdoors.",
+    "bio":"I graduate(d) from Haverford College with a B.S. in Computer Science in May 2022. I've accepted a job offer at Salesforce as an engineer, starting in August 2022. I like to build things in Python, Java, Java/Typescript, and in my free time I like to play and think about basketball, fiddle with keyboards, and enjoy the great outdoors.",
     "contactmessage":"Feel free to reach out to me using this form and I'll get back to you ASAP.",
     "email": "keeton.martin@gmail.com",
     "phone": "650-561-5776",
@@ -56,7 +56,7 @@
       },
       {
         "school":"Menlo School",
-        "degree":"High School",
+        "degree":"High School Diploma",
         "graduated":"June 2018",
         "description":"Graduated high school having focused on computer science and statistics."
       }
