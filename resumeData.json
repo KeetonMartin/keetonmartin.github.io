@@ -7,25 +7,25 @@
     "contactmessage":"Feel free to reach out to me using this form and I'll get back to you ASAP.",
     "email": "keeton.martin@gmail.com",
     "phone": "650-561-5776",
-    "github":"https://github.com/nordicgiant2/react-nice-resume",
+    "github":"https://github.com/KeetonMartin",
     "project":"https://github.com/nordicgiant2/react-nice-resume",
     "address":{
-      "street":"(Your Street)",
-      "city":"(Your City)",
-      "state":"(Your State)",
-      "zip": "(Your Zip/Postal Code)"
+      "street":"370 Lancaster Ave",
+      "city":"Haverford",
+      "state":"PA",
+      "zip": "19041"
     },
     "website": "http://www.timbakerdev.com",
     "resumedownload":"http://timbakerdev.com",
     "social":[
       {
         "name":"facebook",
-        "url":"https://github.com/nordicgiant2/react-nice-resume",
+        "url":"https://www.facebook.com/keeton.martin.79",
         "className":"fa fa-facebook"
       },
       {
         "name":"twitter",
-        "url":"http://twitter.com",
+        "url":"https://twitter.com/KeetonMartin",
         "className":"fa fa-twitter"
       },
       {
