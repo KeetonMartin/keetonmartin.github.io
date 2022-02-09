@@ -1,8 +1,8 @@
 {
   "main": {
     "name":"Keeton Martin",
-    "description":"I am a web development engineer and I use react and vue.js to develop pages. This project is a resume template that can be used as the project home page or resume page",
-    "image":"profilepic.jpg",
+    "description":"I am a software engineer and I've put together this page to showcase my work. Welcome to my home base on the internet",
+    "image":"profilepic.jpeg",
     "bio":"Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
     "email": "youremailhere@gmail.com",
