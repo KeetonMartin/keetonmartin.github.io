@@ -8,7 +8,7 @@
     "email": "keeton.martin@gmail.com",
     "phone": "650-561-5776",
     "github":"https://github.com/KeetonMartin",
-    "project":"https://github.com/KeetonMartin",
+    "project":"https://keetonmartin.github.io/routeCards",
     "address":{
       "street":"370 Lancaster Ave",
       "city":"Haverford",
@@ -104,7 +104,7 @@
         "title":"Route Cards",
         "category":"A web app to recommend a credit card based on your most frequently flown route",
         "image":"routeCardsSplash2.png",
-        "url":"https://keetonmartin.github.io/routeCards/"
+        "url":"https://keetonmartin.github.io/routeCards"
       }
     ]
   }
