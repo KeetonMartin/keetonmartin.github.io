@@ -117,8 +117,13 @@
         "category":"I'm very interested in small ergonomic keyboards, this is the repo for my latest layout",
         "image":"keyboardDrawing.png",
         "url":"https://github.com/KeetonMartin/zmk-config2"
-      }
-
+      },
+      {
+        "title":"EEG and MNE for Neuroscience",
+        "category":"Neuroscience data processing with Python",
+        "image":"neuro.png",
+        "url":"https://github.com/KeetonMartin/introToEEGandMNE"
+      } 
     ]
   }
 }
