@@ -113,13 +113,13 @@
       {
         "title":"Routerunner",
         "category":"A react web app to recommend credit cards based on a user's most frequest flight route",
-        "image":"routeCardsSplash2.png",
+        "image":"routeCardsSplash.png",
         "url":"https://keetonmartin.github.io/routerunner/"
       },
       {
         "title":"Thar She Blows",
         "category":"A very simple DaisyUI web app to check the timing of transit routes I care about In San Francisco",
-        "image":"routeCardsSplash2.png",
+        "image":"thar-she-blows.png",
         "url":"https://keetonmartin.github.io/thar-she-blows/"
       },
       {
