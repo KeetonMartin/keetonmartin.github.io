@@ -117,6 +117,12 @@
         "url":"https://keetonmartin.github.io/routerunner/"
       },
       {
+        "title":"General Election Forecast",
+        "category":"A model and visualization of the US 2024 General Election based on real polling data",
+        "image":"https://i.imgur.com/08ijmGj.png",
+        "url":"https://keetonmartin.github.io/election2024/"
+      },
+      {
         "title":"Gametime Fantasy Dashboard",
         "category":"A Dashboard for Sleeper Fantasy Football Leagues",
         "image":"gametime.png",
