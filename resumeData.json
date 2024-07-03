@@ -8,7 +8,7 @@
     "email": "keeton.martin@gmail.com",
     "phone": "650-561-5776",
     "github":"https://github.com/KeetonMartin",
-    "project":"https://keetonmartin.github.io/routerunner/",
+    "project":"https://keetonmartin.github.io/news/",
     "address":{
       "street":"370 Lancaster Ave",
       "city":"Haverford",
@@ -115,6 +115,12 @@
         "category":"A react web app to recommend credit cards based on a user's most frequest flight route",
         "image":"routeCardsSplash.png",
         "url":"https://keetonmartin.github.io/routerunner/"
+      },
+      {
+        "title":"Customizable News Feed",
+        "category":"A real time news feed that can be customized by categories, powered by RSS",
+        "image":"news.png",
+        "url":"https://keetonmartin.github.io/news/"
       },
       {
         "title":"General Election Forecast",
