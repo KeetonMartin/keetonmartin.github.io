@@ -1,169 +1,181 @@
 {
   "main": {
-    "name":"Keeton Martin",
-    "description":"I am a software engineer and I've put together this page to showcase my work. Welcome to my home base on the internet",
-    "image":"profilepic.jpeg",
-    "bio":"I graduated from Haverford College with a B.S. in Computer Science in May 2022. I took a job at Salesforce as an engineer, and I started in August 2022. I like to build things in Python, Java, Javascript/Typescript, and in my free time I like to play and think about basketball, fiddle with keyboards, and enjoy the great outdoors. I've been traveling a lot lately, you can mostly find me in San Francisco or New York City.",
-    "contactmessage":"Feel free to reach out to me using this form and I'll get back to you ASAP.",
+    "name": "Keeton Martin",
+    "description": "I am a software engineer and I've put together this page to showcase my work. Welcome to my home base on the internet",
+    "image": "profilepic.jpeg",
+    "bio": "I graduated from Haverford College with a B.S. in Computer Science in May 2022. I took a job at Salesforce as an engineer, and I started in August 2022. I like to build things in Python, Java, Javascript/Typescript, and in my free time I like to play and think about basketball, fiddle with keyboards, and enjoy the great outdoors. I've been traveling a lot lately, you can mostly find me in San Francisco or New York City.",
+    "contactmessage": "Feel free to reach out to me using this form and I'll get back to you ASAP.",
     "email": "keeton.martin@gmail.com",
     "phone": "650-561-5776",
-    "github":"https://github.com/KeetonMartin",
+    "github": "https://github.com/KeetonMartin",
     "project": "https://keetonmartin.com",
-    "address":{
-      "street":"370 Lancaster Ave",
-      "city":"Haverford",
-      "state":"PA",
+    "address": {
+      "street": "370 Lancaster Ave",
+      "city": "Haverford",
+      "state": "PA",
       "zip": "19041"
     },
     "website": "https://keetonmartin.com",
-    "resumedownload":"https://drive.google.com/file/d/13hHPYdaMPndafNWUMXQwNxhB_b2Com23/view?usp=sharing",
-    "social":[
+    "resumedownload": "https://drive.google.com/file/d/13hHPYdaMPndafNWUMXQwNxhB_b2Com23/view?usp=sharing",
+    "social": [
       {
-        "name":"facebook",
-        "url":"https://www.facebook.com/keeton.martin.79",
-        "className":"fa fa-facebook"
+        "name": "facebook",
+        "url": "https://www.facebook.com/keeton.martin.79",
+        "className": "fa fa-facebook"
       },
       {
-        "name":"twitter",
-        "url":"https://twitter.com/KeetonMartin",
-        "className":"fa fa-twitter"
+        "name": "twitter",
+        "url": "https://twitter.com/KeetonMartin",
+        "className": "fa fa-twitter"
       },
       {
-        "name":"linkedin",
-        "url":"https://www.linkedin.com/in/keetonmartin/",
-        "className":"fa fa-linkedin"
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/keetonmartin/",
+        "className": "fa fa-linkedin"
       },
       {
-        "name":"instagram",
-        "url":"https://www.instagram.com/keeton_martin/",
-        "className":"fa fa-instagram"
+        "name": "instagram",
+        "url": "https://www.instagram.com/keeton_martin/",
+        "className": "fa fa-instagram"
       },
       {
-        "name":"github",
-        "url":"https://github.com/KeetonMartin",
-        "className":"fa fa-github"
+        "name": "github",
+        "url": "https://github.com/KeetonMartin",
+        "className": "fa fa-github"
       }
     ]
   },
-  "resume":{
-    "skillmessage":"Some of my skills with a somewhat arbitrary graphic representation of my competence.",
-    "education":[
+  "resume": {
+    "skillmessage": "Some of my skills with a somewhat arbitrary graphic representation of my competence.",
+    "education": [
       {
-        "school":"Haverford College",
-        "degree":"Bachelor's of Science in Computer Science",
-        "graduated":"May 2022",
-        "description":"Studied Software Engineering, Algorithms, Data Structures, AI, Databases, and more. Minored in Statistics and minored in Neuroscience."
+        "school": "Haverford College",
+        "degree": "Bachelor's of Science in Computer Science",
+        "graduated": "May 2022",
+        "description": "Studied Software Engineering, Algorithms, Data Structures, AI, Databases, and more. Minored in Statistics and minored in Neuroscience."
       },
       {
-        "school":"Menlo School",
-        "degree":"High School Diploma",
-        "graduated":"June 2018",
-        "description":"Graduated high school having focused on computer science and statistics."
+        "school": "Menlo School",
+        "degree": "High School Diploma",
+        "graduated": "June 2018",
+        "description": "Graduated high school having focused on computer science and statistics."
       }
     ],
-    "work":[
+    "work": [
       {
-        "company":"Salesforce",
-        "title":"Software Engineer (MTS)",
-        "years":"August 2022 - Present",
-        "description":"As a software engineer in Automation Services, designed, developed, and tested new features and enhancements for Flow with scrum team using Typescript and Java. Led planning and execution of high impact epics on a greenfield data transformation ETL project. Promoted to mid-level engineer in February 2024."
+        "company": "Range",
+        "title": "Software Engineer",
+        "years": "May 2025 - Present",
+        "description": "Working on AI systems for wealth management and investment planning."
       },
       {
-        "company":"Salesforce",
-        "title":"Software Engineer Intern",
-        "years":"June 2021 - August 2021",
-        "description":"Worked in the Salesforce core on a describe utility that generates OpenAPI definitions (interfaces for RESTful APIs) for DataRaptors - an essential clicks not code tool in the Salesforce Industries stack. Independent development work on enterprise software completed with guidance of a Senior Architect and Project Manager."
+        "company": "Salesforce",
+        "title": "Software Engineer (MTS)",
+        "years": "August 2022 - April 2025",
+        "description": "As a software engineer in Automation Services, designed, developed, and tested new features and enhancements for Flow with scrum team using Typescript and Java. Led planning and execution of high impact epics on a greenfield data transformation ETL project. Promoted to mid-level engineer in February 2024."
       },
       {
-        "company":"Vlocity",
-        "title":"Software Engineering Intern",
-        "years":"May 2020 - July 2020",
-        "description":"Developed and published a Node.js + Typescript command line tool using the Open CLI Framework (OCLIF) to create a Salesforce DX Plugin for a previously existing NPM Library including automated upload through Jenkins to npmjs.org. Development work done independently from scratch with guidance of a Senior Engineer."
+        "company": "Salesforce",
+        "title": "Software Engineer Intern",
+        "years": "June 2021 - August 2021",
+        "description": "Worked in the Salesforce core on a describe utility that generates OpenAPI definitions (interfaces for RESTful APIs) for DataRaptors - an essential clicks not code tool in the Salesforce Industries stack. Independent development work on enterprise software completed with guidance of a Senior Architect and Project Manager."
+      },
+      {
+        "company": "Vlocity",
+        "title": "Software Engineering Intern",
+        "years": "May 2020 - July 2020",
+        "description": "Developed and published a Node.js + Typescript command line tool using the Open CLI Framework (OCLIF) to create a Salesforce DX Plugin for a previously existing NPM Library including automated upload through Jenkins to npmjs.org. Development work done independently from scratch with guidance of a Senior Engineer."
       }
     ],
-    "skills":[
+    "skills": [
       {
-        "name":"Python",
-        "level":"99%"
+        "name": "Python",
+        "level": "99%"
       },
       {
-        "name":"Java",
-        "level":"90%"
+        "name": "Java",
+        "level": "90%"
       },
       {
-        "name":"Typescript / Javascript",
-        "level":"90%"
+        "name": "Typescript / Javascript",
+        "level": "90%"
       },
       {
-        "name":"Ruby on Rails",
-        "level":"63%"
+        "name": "Ruby on Rails",
+        "level": "63%"
       },
       {
-        "name":"HTML/CSS",
-        "level":"99%"
+        "name": "HTML/CSS",
+        "level": "99%"
       },
       {
-        "name":"SQL",
-        "level":"90%"
+        "name": "SQL",
+        "level": "90%"
       }
     ]
   },
-  "portfolio":{
+  "portfolio": {
     "projects": [
       {
-        "title":"Routerunner",
-        "category":"A react web app to recommend credit cards based on a user's most frequest flight route",
-        "image":"routeCardsSplash.png",
-        "url":"https://keetonmartin.github.io/routerunner/"
+        "title": "RecRouter",
+        "category": "A web app for credit card recommendations based on a user's most frequent flight route",
+        "image": "recrouter.jpg",
+        "url": "https://recrouter.net"
       },
       {
-        "title":"Customizable News Feed",
-        "category":"A real time news feed that can be customized by categories, powered by RSS",
-        "image":"news.png",
-        "url":"https://keetonmartin.github.io/news/"
+        "title": "Routerunner",
+        "category": "A react web app to recommend credit cards based on a user's most frequest flight route",
+        "image": "routeCardsSplash.png",
+        "url": "https://keetonmartin.github.io/routerunner/"
       },
       {
-        "title":"General Election Forecast",
-        "category":"A model and visualization of the US 2024 General Election based on real polling data",
-        "image":"election.png",
-        "url":"https://keetonmartin.github.io/election2024/"
+        "title": "Customizable News Feed",
+        "category": "A real time news feed that can be customized by categories, powered by RSS",
+        "image": "news.png",
+        "url": "https://keetonmartin.github.io/news/"
       },
       {
-        "title":"Gametime Fantasy Dashboard",
-        "category":"A Dashboard for Sleeper Fantasy Football Leagues",
-        "image":"gametime.png",
-        "url":"https://keetonmartin.github.io/gametime/"
+        "title": "General Election Forecast",
+        "category": "A model and visualization of the US 2024 General Election based on real polling data",
+        "image": "election.png",
+        "url": "https://keetonmartin.github.io/election2024/"
       },
       {
-        "title":"Thar She Blows",
-        "category":"A very simple DaisyUI web app to check the timing of transit routes I care about In San Francisco",
-        "image":"thar-she-blows.png",
-        "url":"https://keetonmartin.github.io/thar-she-blows/"
+        "title": "Gametime Fantasy Dashboard",
+        "category": "A Dashboard for Sleeper Fantasy Football Leagues",
+        "image": "gametime.png",
+        "url": "https://keetonmartin.github.io/gametime/"
       },
       {
-        "title":"Route Cards",
-        "category":"An early version of routerunner",
-        "image":"routeCardsSplash2.png",
-        "url":"https://keetonmartin.github.io/routeCards/"
+        "title": "Thar She Blows",
+        "category": "A very simple DaisyUI web app to check the timing of transit routes I care about In San Francisco",
+        "image": "thar-she-blows.png",
+        "url": "https://keetonmartin.github.io/thar-she-blows/"
       },
       {
-        "title":"Olomi Afghan Artist",
-        "category":"An artist's website that I helped to build when he needed to br promoted for an auction fundraiser for a nonprofit",
-        "image":"7Buddhas.png",
-        "url":"http://olomiafghanartist.com/"
+        "title": "Route Cards",
+        "category": "An early version of routerunner",
+        "image": "routeCardsSplash2.png",
+        "url": "https://keetonmartin.github.io/routeCards/"
       },
       {
-        "title":"My Corne Keyboard Layout",
-        "category":"I'm very interested in small ergonomic keyboards, this is the repo for my latest layout",
-        "image":"keyboardDrawing.png",
-        "url":"https://github.com/KeetonMartin/zmk-config2"
+        "title": "Olomi Afghan Artist",
+        "category": "An artist's website that I helped to build when he needed to br promoted for an auction fundraiser for a nonprofit",
+        "image": "7Buddhas.png",
+        "url": "http://olomiafghanartist.com/"
       },
       {
-        "title":"EEG and MNE for Neuroscience",
-        "category":"Neuroscience data processing with Python",
-        "image":"neuro.png",
-        "url":"https://github.com/KeetonMartin/introToEEGandMNE"
-      } 
+        "title": "My Corne Keyboard Layout",
+        "category": "I'm very interested in small ergonomic keyboards, this is the repo for my latest layout",
+        "image": "keyboardDrawing.png",
+        "url": "https://github.com/KeetonMartin/zmk-config2"
+      },
+      {
+        "title": "EEG and MNE for Neuroscience",
+        "category": "Neuroscience data processing with Python",
+        "image": "neuro.png",
+        "url": "https://github.com/KeetonMartin/introToEEGandMNE"
+      }
     ]
   }
 }
