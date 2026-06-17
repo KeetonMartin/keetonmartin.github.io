@@ -2,12 +2,12 @@
 
 Source for [keetonmartin.com](https://keetonmartin.com), a React-based personal site with sections for background, resume, projects, and contact information.
 
-This repository no longer uses the old `react-nice-resume` package or the `particles-bg` library. The app is a custom Create React App project that renders content from `public/resumeData.json`.
+This repository no longer uses the old `react-nice-resume` package, `particles-bg`, or Create React App. The app is a Vite-powered React project that renders content from `public/resumeData.json`.
 
 ## Tech Stack
 
-- React 17
-- Create React App / `react-scripts`
+- React 19
+- Vite
 - Static JSON content in `public/resumeData.json`
 - CSS in `src/App.css`, `src/index.css`, and legacy public CSS/font assets
 
@@ -37,7 +37,7 @@ Build the production site:
 npm run build
 ```
 
-The npm scripts use `scripts/run-react-scripts.js`, which adds the OpenSSL legacy provider flag on newer Node versions. Set `PUBLIC_URL` explicitly before building if the generated assets need to assume a non-root base path.
+Vite builds the site for the domain root. Set `base` in `vite.config.js` explicitly before building if the generated assets need to assume a non-root base path.
 
 ## Content
 

@@ -9,11 +9,13 @@ const SECTIONS = [
   { href: "#contact", label: "Contact" }
 ];
 
+const PUBLIC_URL = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const getImagePath = (fileName) =>
-  `${process.env.PUBLIC_URL}/images/${fileName}`;
+  `${PUBLIC_URL}/images/${fileName}`;
 
 const getPortfolioImagePath = (fileName) =>
-  `${process.env.PUBLIC_URL}/images/portfolio/${fileName}`;
+  `${PUBLIC_URL}/images/portfolio/${fileName}`;
 
 function App() {
   const [siteData, setSiteData] = useState(null);
@@ -22,7 +24,7 @@ function App() {
   useEffect(() => {
     let isActive = true;
 
-    fetch(`${process.env.PUBLIC_URL}/resumeData.json`)
+    fetch(`${PUBLIC_URL}/resumeData.json`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Failed to load content: ${response.status}`);

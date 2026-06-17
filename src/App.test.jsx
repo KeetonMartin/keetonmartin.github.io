@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { act } from "react-dom/test-utils";
+import { render, screen, waitFor } from "@testing-library/react";
+import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import App from "./App";
 
 const mockResumeData = {
@@ -37,7 +37,7 @@ const mockResumeData = {
 };
 
 beforeEach(() => {
-  global.fetch = jest.fn(() =>
+  global.fetch = vi.fn(() =>
     Promise.resolve({
       ok: true,
       json: () => Promise.resolve(mockResumeData)
@@ -46,20 +46,18 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  jest.resetAllMocks();
+  vi.resetAllMocks();
 });
 
 it("renders without crashing", async () => {
-  const div = document.createElement("div");
+  render(<App />);
 
-  await act(async () => {
-    ReactDOM.render(<App />, div);
+  await waitFor(() => {
+    expect(global.fetch).toHaveBeenCalled();
   });
 
-  expect(global.fetch).toHaveBeenCalled();
-  expect(div.textContent).toContain("Reach out directly.");
-  expect(div.textContent).not.toContain("Contact Prompt");
-  expect(div.textContent).toContain("Skills");
-  expect(div.textContent).toContain("Projects");
-  ReactDOM.unmountComponentAtNode(div);
+  expect(screen.getByText("Reach out directly.")).toBeInTheDocument();
+  expect(screen.queryByText("Contact Prompt")).not.toBeInTheDocument();
+  expect(screen.getByText("Skills")).toBeInTheDocument();
+  expect(screen.getAllByText("Projects").length).toBeGreaterThan(0);
 });
