@@ -1,0 +1,206 @@
+{
+  "main": {
+    "name": "Keeton Martin",
+    "description": "I am a software engineer and I've put together this page to showcase my work. Welcome to my home base on the internet",
+    "image": "profilepic.jpeg",
+    "bio": "I graduated from Haverford College with a B.S. in Computer Science in May 2022 and now work as a software engineer at Range in New York. I build AI systems, product infrastructure, and full-stack tools for wealth management and investment planning. Outside of work I like to play and think about basketball, fiddle with keyboards, travel, and enjoy the great outdoors.",
+    "email": "keeton.martin@gmail.com",
+    "phone": "650-561-5776",
+    "github": "https://github.com/KeetonMartin",
+    "githubSecondary": "https://github.com/keetonatrange",
+    "project": "https://keetonmartin.github.io/news/",
+    "address": {
+      "street": "",
+      "city": "NYC",
+      "state": "NY",
+      "zip": "10012"
+    },
+    "website": "https://keetonmartin.com",
+    "resumedownload": "https://drive.google.com/file/d/13hHPYdaMPndafNWUMXQwNxhB_b2Com23/view?usp=sharing",
+    "social": [
+      {
+        "name": "facebook",
+        "url": "https://www.facebook.com/keeton.martin.79",
+        "className": "fa fa-facebook"
+      },
+      {
+        "name": "twitter",
+        "url": "https://twitter.com/KeetonMartin",
+        "className": "fa fa-twitter"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/keetonmartin/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "instagram",
+        "url": "https://www.instagram.com/keeton_martin/",
+        "className": "fa fa-instagram"
+      },
+      {
+        "name": "personal GitHub",
+        "url": "https://github.com/KeetonMartin",
+        "className": "fa fa-github"
+      },
+      {
+        "name": "work GitHub",
+        "url": "https://github.com/keetonatrange",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "I build agent-first products and tools that point toward the future of software.",
+    "education": [
+      {
+        "school": "Haverford College",
+        "degree": "Bachelor of Science in Computer Science",
+        "graduated": "May 2022",
+        "description": "Graduated with a 3.7 GPA and minors in Neuroscience and Statistics. Coursework included Databases, Software Engineering, OS Concurrency, Data Structures, Algorithms, AI, Probability, and Advanced Regressions."
+      },
+      {
+        "school": "Menlo School",
+        "degree": "High School Diploma",
+        "graduated": "June 2018",
+        "description": "Focused on data science, computer science, and statistics. AP Scholar with Honors and ACT 35."
+      }
+    ],
+    "work": [
+      {
+        "company": "Range",
+        "title": "Software Engineer",
+        "years": "May 2025 - Present",
+        "description": "Software engineer on the Investments team and tech lead for Range's flagship AI financial planning product, building broker-dealer and RIA systems for wealth management. I ship AI systems for proactive advisor outreach, day-one personalized financial plans for new customers, and a rebuilt customer-facing agent on a modern tool-calling framework. I also developed internal benchmarks for AI coding tools and agents to guide engineering tooling decisions."
+      },
+      {
+        "company": "Salesforce",
+        "title": "Software Engineer (MTS)",
+        "years": "August 2022 - April 2025",
+        "description": "Designed, built, and shipped Flow features in Automation Services using TypeScript and Java. Led a greenfield ETL project that scaled from 0 to 1.2M transactions in six months, including a UI for non-technical users to configure field mappings, SQL joins, and aggregations with guardrails against misconfiguration. Promoted to mid-level engineer in February 2024 and mentored a summer intern through successful project completion."
+      },
+      {
+        "company": "Salesforce",
+        "title": "Software Engineer Intern",
+        "years": "Summer 2021",
+        "description": "Built an OpenAPI describe utility for DataRaptors in the Salesforce core monolith, helping generate REST API interface definitions for a key Salesforce Industries tool. Completed independent enterprise software work with guidance from a Senior Architect and Project Manager."
+      },
+      {
+        "company": "Vlocity",
+        "title": "Software Engineering Intern",
+        "years": "May 2020 - July 2020",
+        "description": "Developed and published a Node.js and TypeScript Salesforce DX plugin using OCLIF, with automated Jenkins deployment to npmjs.org. Built the command-line tool independently from scratch with guidance from a Senior Engineer."
+      }
+    ],
+    "skills": [
+      {
+        "name": "TypeScript",
+        "level": "95%"
+      },
+      {
+        "name": "Java",
+        "level": "90%"
+      },
+      {
+        "name": "Python",
+        "level": "90%"
+      },
+      {
+        "name": "React",
+        "level": "90%"
+      },
+      {
+        "name": "SQL",
+        "level": "80%"
+      },
+      {
+        "name": "AI/LLMs",
+        "level": "85%"
+      },
+      {
+        "name": "Context Engineering",
+        "level": "85%"
+      },
+      {
+        "name": "Mastra",
+        "level": "70%"
+      },
+      {
+        "name": "Agents SDK",
+        "level": "80%"
+      },
+      {
+        "name": "CI/CD",
+        "level": "85%"
+      },
+      {
+        "name": "Playwright",
+        "level": "80%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "RecRouter",
+        "category": "A recruiter outreach tracker with AI email parsing",
+        "image": "recrouter.jpg",
+        "url": "https://recrouter.net"
+      },
+      {
+        "title": "Routerunner",
+        "category": "A React web app to recommend credit cards based on a user's most frequent flight route",
+        "image": "routrunner.png",
+        "url": "https://keetonmartin.github.io/routerunner/"
+      },
+      {
+        "title": "Customizable News Feed",
+        "category": "A real-time news feed that can be customized by category and powered by RSS",
+        "image": "news.png",
+        "url": "https://keetonmartin.github.io/news/"
+      },
+      {
+        "title": "General Election Forecast",
+        "category": "A model and visualization of the US 2024 General Election based on real polling data",
+        "image": "election.png",
+        "url": "https://keetonmartin.github.io/election2024/"
+      },
+      {
+        "title": "Gametime Fantasy Dashboard",
+        "category": "A dashboard for Sleeper fantasy football leagues",
+        "image": "gametime.png",
+        "url": "https://keetonmartin.github.io/gametime/"
+      },
+      {
+        "title": "Thar She Blows",
+        "category": "A simple DaisyUI web app to check timing for San Francisco transit routes I care about",
+        "image": "thar-she-blows.png",
+        "url": "https://keetonmartin.github.io/thar-she-blows/"
+      },
+      {
+        "title": "Route Cards",
+        "category": "An early version of Routerunner",
+        "image": "routeCardsSplash2.png",
+        "url": "https://keetonmartin.github.io/routeCards/"
+      },
+      {
+        "title": "Olomi Afghan Artist",
+        "category": "An artist website I helped build for an auction fundraiser benefiting a nonprofit",
+        "image": "7Buddhas.png",
+        "url": "http://olomiafghanartist.com/"
+      },
+      {
+        "title": "My Corne Keyboard Layout",
+        "category": "I'm very interested in small ergonomic keyboards, this is the repo for my latest layout",
+        "image": "keyboardDrawing.png",
+        "url": "https://github.com/KeetonMartin/zmk-config2"
+      },
+      {
+        "title": "EEG and MNE for Neuroscience",
+        "category": "Neuroscience data processing with Python",
+        "image": "neuro.png",
+        "url": "https://github.com/KeetonMartin/introToEEGandMNE"
+      }
+    ]
+  }
+}
