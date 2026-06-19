@@ -93,50 +93,17 @@
       }
     ],
     "skills": [
-      {
-        "name": "TypeScript",
-        "level": "95%"
-      },
-      {
-        "name": "Java",
-        "level": "90%"
-      },
-      {
-        "name": "Python",
-        "level": "90%"
-      },
-      {
-        "name": "React",
-        "level": "90%"
-      },
-      {
-        "name": "SQL",
-        "level": "80%"
-      },
-      {
-        "name": "AI/LLMs",
-        "level": "85%"
-      },
-      {
-        "name": "Context Engineering",
-        "level": "85%"
-      },
-      {
-        "name": "Mastra",
-        "level": "70%"
-      },
-      {
-        "name": "Agents SDK",
-        "level": "80%"
-      },
-      {
-        "name": "CI/CD",
-        "level": "85%"
-      },
-      {
-        "name": "Playwright",
-        "level": "80%"
-      }
+      "TypeScript",
+      "Java",
+      "Python",
+      "React",
+      "SQL",
+      "AI/LLMs",
+      "Context Engineering",
+      "Mastra",
+      "Agents SDK",
+      "CI/CD",
+      "Playwright"
     ]
   },
   "portfolio": {
