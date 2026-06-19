@@ -109,6 +109,18 @@
   "portfolio": {
     "projects": [
       {
+        "title": "Railwatch",
+        "category": "A live Amtrak board for tracking train status, route progress, and signal details",
+        "image": "railwatch.png",
+        "url": "https://railwatch.app"
+      },
+      {
+        "title": "Scanify",
+        "category": "An on-device OCR app for extracting, copying, and searching text from images",
+        "image": "scanify.png",
+        "url": "https://keetonmartin.com/scanify"
+      },
+      {
         "title": "RecRouter",
         "category": "A recruiter outreach tracker with AI email parsing",
         "image": "recrouter.jpg",
