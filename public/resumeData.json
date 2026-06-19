@@ -71,7 +71,7 @@
         "company": "Range",
         "title": "Software Engineer",
         "years": "May 2025 - Present",
-        "description": "Software engineer on the Investments team and tech lead for Range's flagship AI financial planning product, building broker-dealer and RIA systems for wealth management. I ship AI systems for proactive advisor outreach, day-one personalized financial plans for new customers, and a rebuilt customer-facing agent on a modern tool-calling framework. I also developed internal benchmarks for AI coding tools and agents to guide engineering tooling decisions."
+        "description": "Software engineer on the Investments team and tech lead for Range's flagship AI financial planning product, building broker-dealer and RIA systems for wealth management. I ship AI agents for proactive advisor outreach, day-one personalized financial plans for new customers, and a rebuilt customer-facing agent on a modern tool-calling framework. I also developed internal benchmarks for AI coding tools and agents to guide engineering tooling decisions."
       },
       {
         "company": "Salesforce",
