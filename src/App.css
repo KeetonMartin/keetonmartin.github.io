@@ -455,7 +455,6 @@ img {
   display: inline-flex;
   flex: 0 0 auto;
   width: fit-content;
-  gap: 0.3rem;
   align-items: center;
   height: 2rem;
   padding: 0 0.65rem;
@@ -463,11 +462,6 @@ img {
   font-size: 0.88rem;
   line-height: 1;
   white-space: nowrap;
-}
-
-.skill-pill strong {
-  font-size: 0.72rem;
-  color: var(--muted);
 }
 
 .project-grid {

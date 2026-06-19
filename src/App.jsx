@@ -248,11 +248,10 @@ function App() {
                 <p>{resume.skillmessage}</p>
               </div>
 
-              <div className="skill-list" aria-label="Skill levels">
+              <div className="skill-list" aria-label="Skills">
                 {skills.map((skill) => (
-                  <div key={skill.name} className="skill-pill">
-                    <span>{skill.name}</span>
-                    <strong>{skill.level}</strong>
+                  <div key={skill} className="skill-pill">
+                    <span>{skill}</span>
                   </div>
                 ))}
               </div>
