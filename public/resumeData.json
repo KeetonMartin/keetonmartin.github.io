@@ -110,7 +110,7 @@
     "projects": [
       {
         "title": "Railwatch",
-        "category": "A live Amtrak board for tracking train status, route progress, and signal details",
+        "category": "A live Amtrak board and public MCP for tracking train status, route progress, and signal details",
         "image": "railwatch.png",
         "url": "https://railwatch.app"
       },
