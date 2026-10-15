@@ -1,63 +1,29 @@
-import React from "react";
-import { render, screen, waitFor } from "@testing-library/react";
-import { afterEach, beforeEach, expect, it, vi } from "vitest";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { expect, it } from "vitest";
 import App from "./App";
+import site from "./data/site.json";
 
-const mockResumeData = {
-  main: {
-    name: "Keeton Martin",
-    description: "Portfolio description",
-    image: "profilepic.jpg",
-    bio: "Bio copy",
-    contactmessage: "Contact copy",
-    email: "test@example.com",
-    phone: "555-555-5555",
-    github: "https://github.com/example",
-    githubSecondary: "https://github.com/work-example",
-    project: "https://example.com/project",
-    website: "https://example.com",
-    resumedownload: "https://example.com/resume.pdf",
-    address: {
-      street: "123 Main St",
-      city: "Brooklyn",
-      state: "NY",
-      zip: "11201"
-    },
-    social: []
-  },
-  resume: {
-    skillmessage: "Skill summary",
-    education: [],
-    work: [],
-    skills: []
-  },
-  portfolio: {
-    projects: []
-  }
-};
-
-beforeEach(() => {
-  global.fetch = vi.fn(() =>
-    Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve(mockResumeData)
-    })
-  );
-});
-
-afterEach(() => {
-  vi.resetAllMocks();
-});
-
-it("renders without crashing", async () => {
+it("renders the intro, departures, and route", () => {
   render(<App />);
 
-  await waitFor(() => {
-    expect(global.fetch).toHaveBeenCalled();
-  });
+  expect(screen.getByRole("heading", { level: 1, name: "Keeton Martin" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "Departures" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "The route so far" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Résumé" })).toBeInTheDocument();
+  expect(screen.queryByText(/650-561/)).not.toBeInTheDocument();
+});
 
-  expect(screen.getByText("Reach out directly.")).toBeInTheDocument();
-  expect(screen.queryByText("Contact Prompt")).not.toBeInTheDocument();
-  expect(screen.getByText("Skills")).toBeInTheDocument();
-  expect(screen.getAllByText("Projects").length).toBeGreaterThan(0);
+it("shows six departures and reveals the rest on request", async () => {
+  render(<App />);
+
+  const rows = () => document.querySelectorAll(".board__row");
+
+  expect(rows()).toHaveLength(6);
+
+  const more = screen.getByRole("button", { name: `${site.projects.length - 6} more departures` });
+  await userEvent.click(more);
+
+  expect(rows()).toHaveLength(site.projects.length);
+  expect(more).toHaveAttribute("aria-expanded", "true");
 });

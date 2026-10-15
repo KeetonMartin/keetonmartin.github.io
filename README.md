@@ -1,15 +1,13 @@
 # Keeton Martin Personal Site
 
-Source for [keetonmartin.com](https://keetonmartin.com), a React-based personal site with sections for background, resume, projects, and contact information.
-
-This repository no longer uses the old `react-nice-resume` package, `particles-bg`, or Create React App. The app is a Vite-powered React project that renders content from `public/resumeData.json`.
+Source for [keetonmartin.com](https://keetonmartin.com): a small React + Vite site with a quiet rail theme. Projects show up on a split-flap departure board, and work history is a route line that fills in as you scroll.
 
 ## Tech Stack
 
-- React 19
-- Vite
-- Static JSON content in `public/resumeData.json`
-- CSS in `src/App.css`, `src/index.css`, and legacy public CSS/font assets
+- React 19 and Vite
+- Content in `src/data/site.json`
+- Styles in `src/App.css` (Newsreader and IBM Plex Mono, from Google Fonts)
+- All motion respects `prefers-reduced-motion`
 
 ## Local Development
 
@@ -41,24 +39,9 @@ Vite builds the site for the domain root. Set `base` in `vite.config.js` explici
 
 ## Content
 
-Most site copy, links, resume entries, skills, and portfolio items live in:
+Copy, links, projects, and work history live in `src/data/site.json`. The board shows the first six projects and hides the rest behind a "more departures" toggle. Each project's `status` is `Live`, `Source`, or `Retired`. The optional `image` is a screenshot in `public/images/projects/`, shown as a hover preview on desktop.
 
-```text
-public/resumeData.json
-```
-
-Portfolio images are stored in:
-
-```text
-public/images/portfolio/
-```
-
-General site images and icons are stored under:
-
-```text
-public/images/
-public/
-```
+`public/llms.txt` is a plain-text summary for agents. Update it whenever the site content changes.
 
 ## Deployment
 

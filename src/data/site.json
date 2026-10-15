@@ -1,0 +1,160 @@
+{
+  "name": "Keeton Martin",
+  "role": "Software engineer",
+  "city": "New York",
+  "intro": [
+    "I'm a software engineer at Range, where I'm tech lead for our AI financial planning product. I build agents that work alongside financial advisors, and agents that high-net-worth households use directly.",
+    "On the side I build train trackers, tiny keyboards, and a home for AI agents. Before Range I spent three years at Salesforce. I studied computer science at Haverford."
+  ],
+  "links": [
+    {
+      "label": "Email",
+      "href": "mailto:keeton.martin@gmail.com"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/KeetonMartin"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/keetonmartin/"
+    },
+    {
+      "label": "X",
+      "href": "https://x.com/KeetonMartin"
+    },
+    {
+      "label": "Résumé",
+      "href": "https://drive.google.com/file/d/13hHPYdaMPndafNWUMXQwNxhB_b2Com23/view?usp=sharing"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Incolia",
+      "remark": "A home for AI agents, with one lasting identity across models and machines",
+      "status": "Live",
+      "image": "incolia.jpg",
+      "url": "https://incolia.com"
+    },
+    {
+      "title": "Railwatch",
+      "remark": "Live Amtrak board and public MCP for train status, route progress, and signals",
+      "status": "Live",
+      "image": "railwatch.jpg",
+      "url": "https://railwatch.app"
+    },
+    {
+      "title": "Scanify",
+      "remark": "On-device OCR for pulling searchable text out of images",
+      "status": "Live",
+      "image": "scanify.jpg",
+      "url": "https://keetonmartin.com/scanify"
+    },
+    {
+      "title": "RecRouter",
+      "remark": "Recruiter outreach tracker with AI email parsing",
+      "status": "Live",
+      "image": "recrouter.jpg",
+      "url": "https://recrouter.net"
+    },
+    {
+      "title": "Routerunner",
+      "remark": "Recommends credit cards based on the route you fly most",
+      "status": "Live",
+      "image": "routerunner.jpg",
+      "url": "https://keetonmartin.github.io/routerunner/"
+    },
+    {
+      "title": "News Feed",
+      "remark": "Real-time RSS news feed, customizable by category",
+      "status": "Live",
+      "image": "news.jpg",
+      "url": "https://keetonmartin.github.io/news/"
+    },
+    {
+      "title": "Election 2024",
+      "remark": "A polling-driven model and visualization of the US general election",
+      "status": "Live",
+      "image": "election.jpg",
+      "url": "https://keetonmartin.github.io/election2024/"
+    },
+    {
+      "title": "Gametime",
+      "remark": "Dashboard for Sleeper fantasy football leagues",
+      "status": "Live",
+      "image": "gametime.jpg",
+      "url": "https://keetonmartin.github.io/gametime/"
+    },
+    {
+      "title": "Thar She Blows",
+      "remark": "Arrival times for the San Francisco transit lines I actually ride",
+      "status": "Live",
+      "url": "https://keetonmartin.github.io/thar-she-blows/"
+    },
+    {
+      "title": "Route Cards",
+      "remark": "The first draft of Routerunner",
+      "status": "Retired",
+      "image": "routecards.jpg",
+      "url": "https://keetonmartin.github.io/routeCards/"
+    },
+    {
+      "title": "Olomi",
+      "remark": "Artist site built for an auction fundraiser benefiting a nonprofit",
+      "status": "Live",
+      "url": "http://olomiafghanartist.com/"
+    },
+    {
+      "title": "Corne Layout",
+      "remark": "ZMK config for my small split ergonomic keyboard",
+      "status": "Source",
+      "image": "corne.jpg",
+      "url": "https://github.com/KeetonMartin/zmk-config2"
+    },
+    {
+      "title": "EEG + MNE",
+      "remark": "Neuroscience signal processing in Python",
+      "status": "Source",
+      "url": "https://github.com/KeetonMartin/introToEEGandMNE"
+    }
+  ],
+  "route": [
+    {
+      "place": "Range",
+      "title": "Software Engineer, Investments",
+      "when": "2025 – now",
+      "current": true,
+      "note": "Tech lead for the AI financial planning product. Agents for proactive advisor outreach, day-one personalized plans for new households, and a customer-facing agent rebuilt on a modern tool-calling framework. Also built our internal benchmarks for AI coding tools."
+    },
+    {
+      "place": "Salesforce",
+      "title": "Member of Technical Staff",
+      "when": "2022 – 2025",
+      "note": "Flow features in Automation Services, in TypeScript and Java. Led a greenfield ETL product from zero to 1.2M transactions in six months. Promoted in 2024; mentored an intern."
+    },
+    {
+      "place": "Haverford College",
+      "title": "B.S. Computer Science",
+      "when": "2022",
+      "note": "Minors in neuroscience and statistics."
+    },
+    {
+      "place": "Salesforce",
+      "title": "Software Engineering Intern",
+      "when": "2021",
+      "note": "An OpenAPI describe utility for DataRaptors in the core monolith."
+    },
+    {
+      "place": "Vlocity",
+      "title": "Software Engineering Intern",
+      "when": "2020",
+      "note": "Built and published a Salesforce DX command-line plugin to npm."
+    },
+    {
+      "place": "Menlo School",
+      "title": "High school",
+      "when": "2018"
+    }
+  ],
+  "offDuty": "Away from work I'm usually playing (or overthinking) basketball, tuning a keyboard layout, traveling, or somewhere outdoors."
+}
