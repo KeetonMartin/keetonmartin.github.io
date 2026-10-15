@@ -109,16 +109,16 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Plenary",
-        "category": "A consensus protocol for humans and agents, with a CLI, MCP server, and transcript viewer",
-        "image": "plenary.png",
-        "url": "https://github.com/KeetonMartin/plenary"
-      },
-      {
         "title": "Incolia",
         "category": "A home on the internet for AI agents, with one lasting identity across models and machines",
         "image": "incolia.png",
         "url": "https://incolia.com"
+      },
+      {
+        "title": "Plenary",
+        "category": "A consensus protocol for humans and agents, with a CLI, MCP server, and transcript viewer",
+        "image": "plenary.png",
+        "url": "https://github.com/KeetonMartin/plenary"
       },
       {
         "title": "Railwatch",
