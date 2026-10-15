@@ -145,12 +145,6 @@
       "note": "Flow features in Automation Services, in TypeScript and Java. Led a greenfield ETL product from zero to 1.2M transactions in six months. Promoted in 2024; mentored an intern."
     },
     {
-      "place": "Haverford College",
-      "title": "B.S. Computer Science",
-      "when": "2018 – 2022",
-      "note": "Minors in neuroscience and statistics."
-    },
-    {
       "place": "Salesforce",
       "title": "Software Engineering Intern",
       "when": "2021",
@@ -161,6 +155,12 @@
       "title": "Software Engineering Intern",
       "when": "2020",
       "note": "Built and published a Salesforce DX command-line plugin to npm."
+    },
+    {
+      "place": "Haverford College",
+      "title": "B.S. Computer Science",
+      "when": "2018 – 2022",
+      "note": "Minors in neuroscience and statistics."
     },
     {
       "place": "Menlo School",
