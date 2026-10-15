@@ -3,14 +3,27 @@ import site from "./data/site.json";
 import Board from "./components/Board";
 import Route from "./components/Route";
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 function App() {
   return (
     <div className="site">
       <header className="hero page">
-        <p className="label">
-          {site.role} &middot; {site.city}
-        </p>
-        <h1 className="hero__name">{site.name}</h1>
+        <div className="hero__top">
+          <div>
+            <p className="label">
+              {site.role} &middot; {site.city}
+            </p>
+            <h1 className="hero__name">{site.name}</h1>
+          </div>
+          <img
+            className="hero__photo"
+            src={`${BASE}/images/${site.photo}`}
+            alt={`Portrait of ${site.name}`}
+            width="112"
+            height="112"
+          />
+        </div>
         <div className="hero__track" aria-hidden="true" />
         {site.intro.map((paragraph) => (
           <p key={paragraph} className="hero__intro">

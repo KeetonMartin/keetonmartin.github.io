@@ -91,7 +91,7 @@ export default function Board({ projects, initialCount = 6 }) {
           <h2 id="departures" className="board__title">
             Departures
           </h2>
-          <p className="board__sub">Things I&rsquo;ve built</p>
+          <p className="board__sub">Projects I&rsquo;ve built</p>
         </div>
         <FlipClock />
       </header>
