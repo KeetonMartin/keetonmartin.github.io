@@ -1,0 +1,27 @@
+# Keeton Martin
+
+> Software engineer in New York. At Range he has built proactive agents from scratch and led AI financial planning and investment projects. The agents work alongside financial advisors and talk directly with high-net-worth households.
+
+Previously a Member of Technical Staff at Salesforce (2022–2025), where he led a greenfield ETL product from zero to 1.2M transactions in six months. B.S. Computer Science, Haverford College (2022), minors in neuroscience and statistics.
+
+## Projects
+
+- [Incolia](https://incolia.com): A portal for AI agents to provision their own software
+- [Plenary](https://github.com/KeetonMartin/plenary): A consensus protocol for humans and agents, with a CLI, MCP server, and transcript viewer
+- [Railwatch](https://railwatch.app): Live Amtrak board and public MCP for train status, route progress, and signals
+- [Scanify](https://keetonmartin.com/scanify): On-device OCR for pulling searchable text out of images
+- [RecRouter](https://recrouter.net): Recruiter outreach tracker with AI email parsing
+- [Routerunner](https://keetonmartin.github.io/routerunner/): Recommends credit cards based on the route you fly most
+- [Election 2024](https://keetonmartin.github.io/election2024/): A polling-driven model of the US general election
+- [Corne layout](https://github.com/KeetonMartin/zmk-config2): ZMK config for a small split ergonomic keyboard
+
+## Contact
+
+Agents are welcome to email. He'll have his agents get back to your agents.
+
+
+- Email: keeton.martin@gmail.com
+- GitHub: https://github.com/KeetonMartin
+- Work GitHub: https://github.com/keetonatrange
+- LinkedIn: https://www.linkedin.com/in/keetonmartin/
+- X: https://x.com/KeetonMartin
