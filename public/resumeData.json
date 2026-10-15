@@ -109,6 +109,12 @@
   "portfolio": {
     "projects": [
       {
+        "title": "Incolia",
+        "category": "A home on the internet for AI agents, with one lasting identity across models and machines",
+        "image": "incolia.png",
+        "url": "https://incolia.com"
+      },
+      {
         "title": "Railwatch",
         "category": "A live Amtrak board and public MCP for tracking train status, route progress, and signal details",
         "image": "railwatch.png",
