@@ -102,7 +102,7 @@ export default function Route({ stops }) {
                   {stop.place}
                   {isLast ? (
                     <span className="stop__terminus" aria-hidden="true">
-                      Terminus
+                      First stop
                     </span>
                   ) : null}
                 </h3>
