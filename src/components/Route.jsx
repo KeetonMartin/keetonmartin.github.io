@@ -10,7 +10,8 @@ const SAMPLES = 160;
 
 /**
  * Career as a rail line, newest at the top. Scrolling down travels back in
- * time: a small train runs down the track, and only the stretch still ahead
+ * time: a small train runs down the track (taking the branch through any
+ * loop), and only the stretch still ahead
  * of it (everything earlier than where it is) stays lit. Stops it has left
  * behind go dark. When it reaches the first stop it docks: the train
  * settles in and a buffer stop appears.
@@ -75,12 +76,13 @@ export default function Route({ stops }) {
         base.setAttribute("d", d);
         fill.setAttribute("d", d);
         // y only ever increases along the path, so a sampled table of
-        // (y, length) lets the fill follow the curve's true length.
+        // (y, length, x) maps the train's height to a point on the curve.
         const total = base.getTotalLength?.() ?? 0;
         const lookup = [];
         for (let i = 0; i <= SAMPLES; i += 1) {
           const at = (total * i) / SAMPLES;
-          lookup.push([base.getPointAtLength?.(at)?.y ?? split, at]);
+          const point = base.getPointAtLength?.(at) ?? { x: MAIN_X, y: split };
+          lookup.push([point.y, at, point.x]);
         }
         fill.style.strokeDasharray = `${total}`;
         laid = { d, lookup, total };
@@ -88,37 +90,57 @@ export default function Route({ stops }) {
       return laid;
     };
 
-    // Light the branch from the train's height onward, measured along the
-    // path. A negative offset starts the dash at that length.
+    // Where the branch is at a given height: length along it, x, and the
+    // tangent's lean. Null when the height is above or below the branch.
+    const branchAt = (branch, y) => {
+      if (!branch || !branch.total) return null;
+      const { lookup } = branch;
+      if (y <= lookup[0][0] || y >= lookup[lookup.length - 1][0]) return null;
+      const i = lookup.findIndex(([sy]) => sy >= y);
+      const [y0, l0, x0] = lookup[i - 1];
+      const [y1, l1, x1] = lookup[i];
+      const t = (y - y0) / Math.max(y1 - y0, 1e-6);
+      return {
+        length: l0 + t * (l1 - l0),
+        x: x0 + t * (x1 - x0),
+        tilt: (Math.atan2(-(x1 - x0), y1 - y0) * 180) / Math.PI
+      };
+    };
+
+    // Light the branch from the train's height onward. A negative dash
+    // offset starts the visible dash at that length along the path.
     const fillBranch = (branch, head) => {
       const fill = branchRef.current?.querySelector(".route__branch-fill");
       if (!branch || !fill || !branch.total) return;
-      const { lookup, total } = branch;
-      let length = 0;
-      if (head >= lookup[lookup.length - 1][0]) length = total;
-      else if (head > lookup[0][0]) {
-        const i = lookup.findIndex(([y]) => y >= head);
-        const [y0, l0] = lookup[i - 1];
-        const [y1, l1] = lookup[i];
-        length = l0 + ((head - y0) / Math.max(y1 - y0, 1e-6)) * (l1 - l0);
-      }
+      const at = branchAt(branch, head);
+      const length = at ? at.length : head >= branch.lookup[branch.lookup.length - 1][0] ? branch.total : 0;
       fill.style.strokeDashoffset = `${-length}`;
     };
 
-    if (reduced) {
-      layTrack();
-      // Without motion, show the whole line lit and at rest.
-      fillBranch(layBranch(), -Infinity);
-      list.style.setProperty("--progress", "0");
-      list.dataset.arrived = "true";
-      stopsEls.forEach((stop) => (stop.dataset.lit = "true"));
-      return undefined;
-    }
+    // The train rides the branch through the loop, leaning into the curves
+    // as it switches tracks, and the main line everywhere else.
+    const placeTrain = (branch, head) => {
+      const at = branchAt(branch, head);
+      list.style.setProperty("--train-x", `${at ? at.x : MAIN_X}px`);
+      list.style.setProperty("--train-y", `${head}px`);
+      list.style.setProperty("--train-tilt", `${at ? at.tilt : 0}deg`);
+    };
 
     let frame = null;
 
     const update = () => {
       frame = null;
+
+      if (reduced) {
+        // Without motion, show the whole line lit and at rest.
+        layTrack();
+        fillBranch(layBranch(), -Infinity);
+        list.style.setProperty("--progress", "0");
+        list.dataset.arrived = "true";
+        stopsEls.forEach((stop) => (stop.dataset.lit = "true"));
+        return;
+      }
+
       const { first, length } = layTrack();
       const branch = layBranch();
       const top = list.getBoundingClientRect().top + first;
@@ -131,6 +153,7 @@ export default function Route({ stops }) {
       const head = first + progress * length;
       list.style.setProperty("--progress", progress.toFixed(4));
       fillBranch(branch, head);
+      placeTrain(branch, head);
       // A little hysteresis so the arrival doesn't flicker at the boundary.
       if (progress >= 0.999) list.dataset.arrived = "true";
       else if (progress < 0.97) list.dataset.arrived = "false";
@@ -146,9 +169,14 @@ export default function Route({ stops }) {
     update();
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
+    // Re-measure when the route's own layout shifts, e.g. once web fonts load.
+    const observer =
+      typeof ResizeObserver === "undefined" ? null : new ResizeObserver(schedule);
+    observer?.observe(list);
     return () => {
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
+      observer?.disconnect();
       if (frame !== null) cancelAnimationFrame(frame);
     };
   }, [reduced, stops]);
@@ -157,12 +185,14 @@ export default function Route({ stops }) {
     <div className="route" ref={ref} data-arrived="false">
       <span className="route__track" aria-hidden="true">
         <span className="route__fill" />
-        <span className="route__train" />
       </span>
       <svg className="route__branch" ref={branchRef} width="40" height="0" aria-hidden="true">
         <path className="route__branch-base" />
         <path className="route__branch-fill" />
       </svg>
+      <span className="route__train" aria-hidden="true">
+        <span className="route__car" />
+      </span>
       <ol className="route__stops">
         {stops.map((stop, index) => {
           const isLast = index === stops.length - 1;

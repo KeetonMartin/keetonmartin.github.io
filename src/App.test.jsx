@@ -9,7 +9,7 @@ it("renders the intro, departures, and route", () => {
 
   expect(screen.getByRole("heading", { level: 1, name: "Keeton Martin" })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Departures" })).toBeInTheDocument();
-  expect(screen.getByRole("heading", { name: "Where I’ve worked and studied" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "Work and school" })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Résumé" })).toBeInTheDocument();
   expect(screen.queryByText(/650-561/)).not.toBeInTheDocument();
 });
