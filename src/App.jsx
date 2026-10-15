@@ -47,7 +47,7 @@ function App() {
 
         <section className="page section" aria-labelledby="route">
           <h2 id="route" className="label">
-            The route so far
+            Where I&rsquo;ve worked and studied
           </h2>
           <Route stops={site.route} />
         </section>

@@ -618,12 +618,11 @@ p {
 
 .route__branch-fill {
   stroke: var(--accent);
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
+  stroke-dasharray: 0 9999;
 }
 
-/* Every stop in the looped stretch is indented past the branch line. */
-.stop[data-lane] {
+/* Branch stops are indented past the branch line. */
+.stop[data-lane="branch"] {
   padding-left: 3.6rem;
 }
 
@@ -1040,7 +1039,7 @@ p {
     padding-left: 1.85rem;
   }
 
-  .stop[data-lane] {
+  .stop[data-lane="branch"] {
     padding-left: 3.1rem;
   }
 

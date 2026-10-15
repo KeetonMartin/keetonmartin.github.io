@@ -5,7 +5,8 @@ import { useReducedMotion } from "../hooks";
 // route's left edge. They match the dot positions in App.css.
 const MAIN_X = 5.5;
 const BRANCH_X = 27.5;
-const CURVE = 30;
+const CURVE = 60;
+const SAMPLES = 160;
 
 /**
  * Career as a rail line. As the reader scrolls, a small train runs down the
@@ -13,10 +14,9 @@ const CURVE = 30;
  * last stop it docks: the train settles into the terminus and a buffer stop
  * appears.
  *
- * Stops with a `lane` form a loop: "branch" stops sit on a parallel line
- * that splits off the main line and rejoins it, while "main" stops in the
- * same stretch stay on the main line beside it (e.g. internships during
- * college).
+ * Consecutive stops with `lane: "branch"` sit on a parallel line that splits
+ * off the main line below the stop before them and rejoins just above the
+ * stop after them (e.g. internships taken during college).
  */
 export default function Route({ stops }) {
   const ref = useRef(null);
@@ -43,38 +43,64 @@ export default function Route({ stops }) {
       return { first, length: last - first };
     };
 
-    // Lay the branch: split off below the stop before the loop, run parallel
-    // past every stop in it, and rejoin above the stop after it.
+    // Lay the branch: split off below the stop before the branch stops and
+    // rejoin just above the stop after them. Curves shrink only if the gap
+    // is too tight for a full-length easement.
+    let laid = { d: null, lookup: null, total: 0 };
+
     const layBranch = () => {
       const svg = branchRef.current;
-      const looped = stopsEls.filter((stop) => stop.dataset.lane);
-      const start = stopsEls.indexOf(looped[0]);
-      const end = stopsEls.indexOf(looped[looped.length - 1]);
-      const before = stopsEls[start - 1];
-      const after = stopsEls[end + 1];
-      if (!svg || !looped.length || !before || !after) return null;
+      const branched = stopsEls.filter((stop) => stop.dataset.lane === "branch");
+      const before = stopsEls[stopsEls.indexOf(branched[0]) - 1];
+      const after = stopsEls[stopsEls.indexOf(branched[branched.length - 1]) + 1];
+      if (!svg || !branched.length || !before || !after) return null;
 
-      const split = Math.max(centerOf(before) + 16, centerOf(looped[0]) - CURVE - 22);
-      const join = Math.min(centerOf(after) - 16, centerOf(looped[looped.length - 1]) + CURVE + 22);
-      const bend = CURVE / 2;
+      const firstC = centerOf(branched[0]);
+      const lastC = centerOf(branched[branched.length - 1]);
+      const split = Math.max(centerOf(before) + 14, firstC - CURVE - 18);
+      const splitCurve = Math.min(CURVE, firstC - 12 - split);
+      const join = centerOf(after) - 14;
+      const joinCurve = Math.min(CURVE, join - (lastC + 12));
       const d = [
         `M ${MAIN_X} ${split}`,
-        `C ${MAIN_X} ${split + bend}, ${BRANCH_X} ${split + bend}, ${BRANCH_X} ${split + CURVE}`,
-        `L ${BRANCH_X} ${join - CURVE}`,
-        `C ${BRANCH_X} ${join - bend}, ${MAIN_X} ${join - bend}, ${MAIN_X} ${join}`
+        `C ${MAIN_X} ${split + splitCurve / 2}, ${BRANCH_X} ${split + splitCurve / 2}, ${BRANCH_X} ${split + splitCurve}`,
+        `L ${BRANCH_X} ${join - joinCurve}`,
+        `C ${BRANCH_X} ${join - joinCurve / 2}, ${MAIN_X} ${join - joinCurve / 2}, ${MAIN_X} ${join}`
       ].join(" ");
 
-      svg.setAttribute("height", list.offsetHeight);
-      svg.querySelectorAll("path").forEach((path) => path.setAttribute("d", d));
-      return { split, join };
+      if (d !== laid.d) {
+        svg.setAttribute("height", list.offsetHeight);
+        const [base, fill] = svg.querySelectorAll("path");
+        base.setAttribute("d", d);
+        fill.setAttribute("d", d);
+        // y only ever increases along the path, so a sampled table of
+        // (y, length) lets the fill follow the curve's true length.
+        const total = base.getTotalLength?.() ?? 0;
+        const lookup = [];
+        for (let i = 0; i <= SAMPLES; i += 1) {
+          const at = (total * i) / SAMPLES;
+          lookup.push([base.getPointAtLength?.(at)?.y ?? split, at]);
+        }
+        fill.style.strokeDasharray = `${total}`;
+        laid = { d, lookup, total };
+      }
+      return laid;
     };
 
-    // Fill the branch as far as the train has travelled alongside it.
+    // Fill the branch up to the train's height, measured along the path.
     const fillBranch = (branch, head) => {
       const fill = branchRef.current?.querySelector(".route__branch-fill");
-      if (!branch || !fill) return;
-      const share = Math.min(1, Math.max(0, (head - branch.split) / (branch.join - branch.split)));
-      fill.style.strokeDashoffset = String(1 - share);
+      if (!branch || !fill || !branch.total) return;
+      const { lookup, total } = branch;
+      let length = 0;
+      if (head >= lookup[lookup.length - 1][0]) length = total;
+      else if (head > lookup[0][0]) {
+        const i = lookup.findIndex(([y]) => y >= head);
+        const [y0, l0] = lookup[i - 1];
+        const [y1, l1] = lookup[i];
+        length = l0 + ((head - y0) / Math.max(y1 - y0, 1e-6)) * (l1 - l0);
+      }
+      fill.style.strokeDashoffset = `${total - length}`;
     };
 
     if (reduced) {
@@ -131,8 +157,8 @@ export default function Route({ stops }) {
         <span className="route__train" />
       </span>
       <svg className="route__branch" ref={branchRef} width="40" height="0" aria-hidden="true">
-        <path className="route__branch-base" pathLength="1" />
-        <path className="route__branch-fill" pathLength="1" />
+        <path className="route__branch-base" />
+        <path className="route__branch-fill" />
       </svg>
       <ol className="route__stops">
         {stops.map((stop, index) => {
@@ -143,7 +169,7 @@ export default function Route({ stops }) {
               key={`${stop.place}-${stop.when}`}
               className="stop"
               data-current={stop.current ? "true" : "false"}
-            data-lane={stop.lane}
+              data-lane={stop.lane}
               data-passed="false"
               data-terminus={isLast ? "true" : "false"}
             >
