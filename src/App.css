@@ -573,10 +573,13 @@ p {
   background: var(--rule);
 }
 
+/* Lit from the train down to the first stop: the time not yet rewound. */
 .route__fill {
   position: absolute;
-  inset: 0 0 auto;
-  height: calc(var(--progress) * 100%);
+  top: calc(var(--progress) * 100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: var(--accent);
 }
 
@@ -618,7 +621,6 @@ p {
 
 .route__branch-fill {
   stroke: var(--accent);
-  stroke-dasharray: 0 9999;
 }
 
 /* Branch stops are indented past the branch line. */
@@ -735,7 +737,7 @@ p {
     transform 0.4s var(--ease-out);
 }
 
-.stop[data-passed="true"] .stop__dot {
+.stop[data-lit="true"] .stop__dot {
   border-color: var(--accent);
   background: var(--accent);
   transform: scale(1.1);

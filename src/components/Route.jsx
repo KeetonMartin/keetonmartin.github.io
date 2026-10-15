@@ -9,10 +9,11 @@ const CURVE = 60;
 const SAMPLES = 160;
 
 /**
- * Career as a rail line. As the reader scrolls, a small train runs down the
- * track and each stop lights up once it has been passed. When it reaches the
- * last stop it docks: the train settles into the terminus and a buffer stop
- * appears.
+ * Career as a rail line, newest at the top. Scrolling down travels back in
+ * time: a small train runs down the track, and only the stretch still ahead
+ * of it (everything earlier than where it is) stays lit. Stops it has left
+ * behind go dark. When it reaches the first stop it docks: the train
+ * settles in and a buffer stop appears.
  *
  * Consecutive stops with `lane: "branch"` sit on a parallel line that splits
  * off the main line below the stop before them and rejoins just above the
@@ -87,7 +88,8 @@ export default function Route({ stops }) {
       return laid;
     };
 
-    // Fill the branch up to the train's height, measured along the path.
+    // Light the branch from the train's height onward, measured along the
+    // path. A negative offset starts the dash at that length.
     const fillBranch = (branch, head) => {
       const fill = branchRef.current?.querySelector(".route__branch-fill");
       if (!branch || !fill || !branch.total) return;
@@ -100,15 +102,16 @@ export default function Route({ stops }) {
         const [y1, l1] = lookup[i];
         length = l0 + ((head - y0) / Math.max(y1 - y0, 1e-6)) * (l1 - l0);
       }
-      fill.style.strokeDashoffset = `${total - length}`;
+      fill.style.strokeDashoffset = `${-length}`;
     };
 
     if (reduced) {
       layTrack();
-      fillBranch(layBranch(), Infinity);
-      list.style.setProperty("--progress", "1");
+      // Without motion, show the whole line lit and at rest.
+      fillBranch(layBranch(), -Infinity);
+      list.style.setProperty("--progress", "0");
       list.dataset.arrived = "true";
-      stopsEls.forEach((stop) => (stop.dataset.passed = "true"));
+      stopsEls.forEach((stop) => (stop.dataset.lit = "true"));
       return undefined;
     }
 
@@ -132,7 +135,7 @@ export default function Route({ stops }) {
       if (progress >= 0.999) list.dataset.arrived = "true";
       else if (progress < 0.97) list.dataset.arrived = "false";
       stopsEls.forEach((stop) => {
-        stop.dataset.passed = centerOf(stop) <= head + 1 ? "true" : "false";
+        stop.dataset.lit = centerOf(stop) >= head - 1 ? "true" : "false";
       });
     };
 
@@ -170,7 +173,7 @@ export default function Route({ stops }) {
               className="stop"
               data-current={stop.current ? "true" : "false"}
               data-lane={stop.lane}
-              data-passed="false"
+              data-lit="true"
               data-terminus={isLast ? "true" : "false"}
             >
               <span className="stop__dot" aria-hidden="true" />
