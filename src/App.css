@@ -199,14 +199,17 @@ p {
 }
 
 .links a,
-.prose a {
+.hero__intro a,
+.notice a {
   text-decoration: none;
   background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat;
   padding-bottom: 2px;
   transition: background-size 0.35s var(--ease-out), color 0.2s;
 }
 
-.links a:hover {
+.links a:hover,
+.hero__intro a:hover,
+.notice a:hover {
   color: var(--accent);
   background-size: 0% 1px;
   background-position: right bottom;
@@ -672,13 +675,42 @@ p {
   max-width: 36rem;
 }
 
+/* ---------- Notice to agents ---------- */
+
+/* Styled like a posted station notice: boxed, mono heading, small print. */
+.notice {
+  margin-top: clamp(4rem, 10vh, 6rem);
+}
+
+.notice > * {
+  max-width: 36rem;
+}
+
+.notice__title {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.notice__body {
+  margin-top: 0.9rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: clamp(5rem, 14vh, 8rem);
+  margin-top: clamp(3.5rem, 9vh, 5rem);
   padding-top: 1.4rem;
   padding-bottom: 2.5rem;
   font-family: var(--mono);

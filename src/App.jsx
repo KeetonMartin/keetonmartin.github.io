@@ -1,6 +1,7 @@
 import "./App.css";
 import site from "./data/site.json";
 import Board from "./components/Board";
+import Rich from "./components/Rich";
 import Route from "./components/Route";
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
@@ -27,7 +28,7 @@ function App() {
         <div className="hero__track" aria-hidden="true" />
         {site.intro.map((paragraph) => (
           <p key={paragraph} className="hero__intro">
-            {paragraph}
+            <Rich text={paragraph} />
           </p>
         ))}
         <nav className="links" aria-label="Elsewhere">
@@ -57,6 +58,15 @@ function App() {
           </h2>
           <p className="prose">{site.offDuty}</p>
         </section>
+
+        <aside className="page notice" aria-labelledby="notice">
+          <h2 id="notice" className="notice__title">
+            Notice to agents
+          </h2>
+          <p className="notice__body">
+            <Rich text={site.agentNote} />
+          </p>
+        </aside>
       </main>
 
       <footer className="footer page">
