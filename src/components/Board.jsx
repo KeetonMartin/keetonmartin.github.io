@@ -106,7 +106,7 @@ export default function Board({ projects, initialCount = 6 }) {
       <ol className="board__rows" id="board-rows">
         {rows.map((project, index) => {
           const batch = index < initialCount ? index : index - initialCount;
-          const delay = batch * 110;
+          const delay = batch * 160;
 
           return (
             <li key={project.title} className="board__row">
@@ -124,15 +124,15 @@ export default function Board({ projects, initialCount = 6 }) {
                   go={seen}
                   animate={!reduced}
                   delay={delay}
-                  stagger={26}
+                  stagger={40}
                 />
                 <FlapText
                   className="board__remark"
                   text={project.remark}
                   go={seen}
                   animate={!reduced}
-                  delay={delay + 140}
-                  stagger={6}
+                  delay={delay + 200}
+                  stagger={9}
                 />
                 <span className="board__status" data-status={project.status.toLowerCase()}>
                   <span className="lamp" aria-hidden="true" />
@@ -140,8 +140,8 @@ export default function Board({ projects, initialCount = 6 }) {
                     text={project.status}
                     go={seen}
                     animate={!reduced}
-                    delay={delay + 260}
-                    stagger={30}
+                    delay={delay + 380}
+                    stagger={45}
                   />
                 </span>
               </a>

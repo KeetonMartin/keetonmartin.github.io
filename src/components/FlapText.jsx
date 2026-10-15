@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 
 const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const LOWER = "abcdefghijklmnopqrstuvwxyz0123456789";
-const FLAP_MS = 55;
+const FLAP_MS = 80;
 
 // Cheap deterministic noise so each character cycles through its own
 // sequence of glyphs, the way a split-flap drum would.
@@ -17,7 +17,7 @@ const glyphFor = (char, index, tick) => {
  * Characters appear left to right, flicker through a few glyphs, then land.
  * Word lengths never change mid-animation, so wrapping stays stable.
  */
-export default function FlapText({ text, go, animate, delay = 0, stagger = 18, className }) {
+export default function FlapText({ text, go, animate, delay = 0, stagger = 28, className }) {
   const ref = useRef(null);
 
   useLayoutEffect(() => {
@@ -38,7 +38,7 @@ export default function FlapText({ text, go, animate, delay = 0, stagger = 18, c
 
     const chars = [...text];
     const settleAt = chars.map(
-      (_, i) => i * stagger + 160 + ((Math.sin(i * 4.1) + 1) / 2) * 180
+      (_, i) => i * stagger + 320 + ((Math.sin(i * 4.1) + 1) / 2) * 360
     );
     const end = Math.max(0, ...settleAt);
     let start = null;
