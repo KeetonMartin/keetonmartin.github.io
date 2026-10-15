@@ -597,6 +597,44 @@ p {
     transform 0.5s var(--ease-out);
 }
 
+/* ---------- Branch loop ---------- */
+
+.route__branch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.route__branch path {
+  fill: none;
+  stroke-width: 1;
+}
+
+.route__branch-base {
+  stroke: var(--rule);
+}
+
+.route__branch-fill {
+  stroke: var(--accent);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+/* Every stop in the looped stretch is indented past the branch line. */
+.stop[data-lane] {
+  padding-left: 3.6rem;
+}
+
+.stop[data-lane="branch"] .stop__dot {
+  left: 22px;
+}
+
+.stop[data-lane="branch"] .stop__place {
+  font-size: 1.15rem;
+}
+
 /* ---------- Arrival at the terminus ---------- */
 
 /* The train eases into the last stop and is absorbed by it. */
@@ -1000,6 +1038,10 @@ p {
 
   .stop {
     padding-left: 1.85rem;
+  }
+
+  .stop[data-lane] {
+    padding-left: 3.1rem;
   }
 
   .footer {

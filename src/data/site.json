@@ -148,19 +148,22 @@
       "place": "Salesforce",
       "title": "Software Engineering Intern",
       "when": "2021",
-      "note": "An OpenAPI describe utility for DataRaptors in the core monolith."
+      "note": "An OpenAPI describe utility for DataRaptors in the core monolith.",
+      "lane": "branch"
     },
     {
       "place": "Vlocity",
       "title": "Software Engineering Intern",
       "when": "2020",
-      "note": "Built and published a Salesforce DX command-line plugin to npm."
+      "note": "Built and published a Salesforce DX command-line plugin to npm.",
+      "lane": "branch"
     },
     {
       "place": "Haverford College",
       "title": "B.S. Computer Science",
       "when": "2018 – 2022",
-      "note": "Minors in neuroscience and statistics."
+      "note": "Minors in neuroscience and statistics.",
+      "lane": "main"
     },
     {
       "place": "Menlo School",
