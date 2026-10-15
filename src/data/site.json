@@ -136,20 +136,23 @@
       "title": "Software Engineer, Investments",
       "when": "2025 – now",
       "current": true,
-      "note": "Tech lead for the AI financial planning product. Agents for proactive advisor outreach, day-one personalized plans for new households, and a customer-facing agent rebuilt on a modern tool-calling framework. Also built our internal benchmarks for AI coding tools."
+      "note": "Tech lead for the AI financial planning product. Agents for proactive advisor outreach, day-one personalized plans for new households, and a customer-facing agent rebuilt on a modern tool-calling framework. Also built our internal benchmarks for AI coding tools.",
+      "logo": "range.png"
     },
     {
       "place": "Salesforce",
       "title": "Member of Technical Staff",
       "when": "2022 – 2025",
-      "note": "Flow features in Automation Services, in TypeScript and Java. Led a greenfield ETL product from zero to 1.2M transactions in six months. Promoted in 2024; mentored an intern."
+      "note": "Flow features in Automation Services, in TypeScript and Java. Led a greenfield ETL product from zero to 1.2M transactions in six months. Promoted in 2024; mentored an intern.",
+      "logo": "salesforce.png"
     },
     {
       "place": "Salesforce",
       "title": "Software Engineering Intern",
       "when": "2021",
       "note": "An OpenAPI describe utility for DataRaptors in the core monolith.",
-      "lane": "branch"
+      "lane": "branch",
+      "logo": "salesforce.png"
     },
     {
       "place": "Vlocity",

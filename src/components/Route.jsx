@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useReducedMotion } from "../hooks";
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 // Horizontal centers of the main line and the branch, in px from the
 // route's left edge. They match the dot positions in App.css.
 const MAIN_X = 5.5;
@@ -212,6 +214,15 @@ export default function Route({ stops }) {
               ) : null}
               <div className="stop__head">
                 <h3 className="stop__place">
+                  {stop.logo ? (
+                    <img
+                      className="stop__logo"
+                      src={`${BASE}/images/logos/${stop.logo}`}
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                  ) : null}
                   {stop.place}
                   {isLast ? (
                     <span className="stop__terminus" aria-hidden="true">
