@@ -4,8 +4,8 @@
   "city": "New York",
   "photo": "keeton.jpg",
   "intro": [
-    "I'm a software engineer at [Range](https://range.com), where I've built proactive, engaging agents from scratch and led our AI financial planning and investment projects. Our agents work alongside financial advisors and talk directly with the high-net-worth households we serve.",
-    "On the side I build train trackers, tiny keyboards, and a portal for AI agents to provision their own software. Before Range I spent three years at Salesforce. I studied computer science at Haverford."
+    "I'm a software engineer at [Range](https://range.com), building an AI wealth assistant that works across iMessage and the web. I designed and shipped its proactive execution system, helping it follow up, review a household’s finances, and reach out when something needs attention.",
+    "On the side I build Railwatch, an Amtrak tracker, and Incolia, a platform for persistent AI agents. I also tinker with tiny keyboards. Before Range I spent three years at Salesforce. I studied computer science at Haverford."
   ],
   "links": [
     {
@@ -30,16 +30,23 @@
     },
     {
       "label": "Résumé",
-      "href": "https://drive.google.com/file/d/13hHPYdaMPndafNWUMXQwNxhB_b2Com23/view?usp=sharing"
+      "href": "/Keeton-Martin-Resume.pdf"
     }
   ],
   "projects": [
     {
       "title": "Incolia",
-      "remark": "A portal for AI agents to provision their own software",
+      "remark": "A platform for persistent AI identities, scoped permissions, and communication between autonomous agents.",
       "status": "Live",
       "image": "incolia.jpg",
       "url": "https://incolia.com"
+    },
+    {
+      "title": "Railwatch",
+      "remark": "Live Amtrak tracking, station boards, and train status for AI assistants through MCP.",
+      "status": "Live",
+      "image": "railwatch.jpg",
+      "url": "https://railwatch.app"
     },
     {
       "title": "Plenary",
@@ -47,13 +54,6 @@
       "status": "Source",
       "image": "plenary.jpg",
       "url": "https://github.com/KeetonMartin/plenary"
-    },
-    {
-      "title": "Railwatch",
-      "remark": "Live Amtrak board and public MCP for train status, route progress, and signals",
-      "status": "Live",
-      "image": "railwatch.jpg",
-      "url": "https://railwatch.app"
     },
     {
       "title": "Scanify",
@@ -133,10 +133,10 @@
   "route": [
     {
       "place": "Range",
-      "title": "Software Engineer, Investments",
+      "title": "Software Engineer, AI and Investments",
       "when": "2025 – now",
       "current": true,
-      "note": "Tech lead for the AI financial planning product. Agents for proactive advisor outreach, day-one personalized plans for new households, and a customer-facing agent rebuilt on a modern tool-calling framework. Also built our internal benchmarks for AI coding tools.",
+      "note": "Designed and shipped the proactive execution system for Range’s AI wealth assistant on web and iMessage. Built background workflows with safe retries, consent and quiet-hours controls, plus end-to-end evaluations for useful outreach and knowing when to stay quiet. Improved agent memory and iMessage reliability, and shipped full-stack brokerage and advisor tools.",
       "logo": "range.png"
     },
     {
