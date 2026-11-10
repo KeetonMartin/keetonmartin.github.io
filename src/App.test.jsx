@@ -10,7 +10,9 @@ it("renders the intro, departures, and route", () => {
   expect(screen.getByRole("heading", { level: 1, name: "Keeton Martin" })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Departures" })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Work and school" })).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Résumé" })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Résumé" })).toHaveAttribute("href", "/Keeton-Martin-Resume.pdf");
+  expect(screen.getByText("Software Engineer, AI and Investments")).toBeInTheDocument();
+  expect(site.projects.slice(0, 2).map(project => project.title)).toEqual(["Incolia", "Railwatch"]);
   expect(screen.queryByText(/650-561/)).not.toBeInTheDocument();
 });
 
