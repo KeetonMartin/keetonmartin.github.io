@@ -39,7 +39,7 @@ Vite builds the site for the domain root. Set `base` in `vite.config.js` explici
 
 ## Content
 
-Copy, links, projects, and work history live in `src/data/site.json`. The board shows the first six projects and hides the rest behind a "more departures" toggle. Each project's `status` is `Live`, `Source`, or `Retired`. The optional `image` is a screenshot in `public/images/projects/`, shown as a hover preview on desktop.
+Copy, links, projects, and work history live in `src/data/site.json`. The board shows the first six projects and hides the rest behind a "more departures" toggle. Each project's `status` is `Live`, `Offline`, `Source`, or `Retired`. The optional `image` is a screenshot in `public/images/projects/`, shown as a hover preview on desktop.
 
 `public/llms.txt` is a plain-text summary for agents. Update it whenever the site content changes.
 
