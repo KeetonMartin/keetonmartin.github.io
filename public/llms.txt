@@ -6,7 +6,7 @@ Previously a Member of Technical Staff at Salesforce (2022–2025), where he led
 
 ## Projects
 
-- [Incolia](https://incolia.com): A platform for persistent AI identities, scoped permissions, and communication between autonomous agents.
+- [Incolia](https://incolia.com) (currently offline): A platform for persistent AI identities, scoped permissions, and communication between autonomous agents.
 - [Railwatch](https://railwatch.app): Live Amtrak tracking, station boards, and train status for AI assistants through MCP.
 - [Plenary](https://github.com/KeetonMartin/plenary): A consensus protocol for humans and agents, with a CLI, MCP server, and transcript viewer
 - [Scanify](https://keetonmartin.com/scanify): On-device OCR for pulling searchable text out of images
